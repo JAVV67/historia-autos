@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de los Autos - Presentación</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    /* Navegación fija */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 1rem;
+      z-index: 100;
+      border-bottom: 1px solid #334155;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Portada */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      color: #94a3b8;
+      max-width: 600px;
+    }
+
+    /* Secciones */
+    section {
+      min-height: 100vh;
+      padding: 6rem 2rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section:nth-child(odd) {
+      background: #0f172a;
+    }
+
+    section:nth-child(even) {
+      background: #1e293b;
+    }
+
+    .contenido {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .texto h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      color: #38bdf8;
+    }
+
+    .texto p {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+
+    .texto ul {
+      margin-left: 1.5rem;
+      color: #cbd5e1;
+    }
+
+    .texto li {
+      margin-bottom: 0.5rem;
+    }
+
+    .imagen {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .imagen img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contenido {
+        grid-template-columns: 1fr;
+      }
+
+      .imagen {
+        order: -1;
+      }
+
+      nav {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#seccion1">Orígenes</a>
+    <a href="#seccion2">Producción en masa</a>
+    <a href="#seccion3">Edad de oro</a>
+    <a href="#seccion4">Era moderna</a>
+  </nav>
+
+  <!-- Portada -->
+  <header id="inicio">
+    <h1>Historia de los Autos</h1>
+    <p>Un recorrido por la evolución del automóvil, desde sus inicios hasta la movilidad del futuro</p>
+  </header>
+
+  <!-- Sección 1: Orígenes -->
+  <section id="seccion1">
+    <div class="contenido">
+      <div class="texto">
+        <h2>1. Orígenes del Automóvil</h2>
+        <p>
+          Los primeros intentos de vehículos autopropulsados datan del siglo XVIII, 
+          pero el automóvil moderno nació a finales del siglo XIX.
+        </p>
+        <ul>
+          <li><strong>1769:</strong> Nicolas-Joseph Cugnot crea el primer vehículo de vapor.</li>
+          <li><strong>1885-1886:</strong> Karl Benz presenta el Benz Patent-Motorwagen.</li>
+          <li><strong>1890s:</strong> Gottlieb Daimler y otros pioneros perfeccionan el motor de gasolina.</li>
+          <li><strong>Principios 1900:</strong> Aparecen las primeras fábricas y modelos comerciales.</li>
+        </ul>
+        <p>
+          Estos inventos revolucionaron el transporte y marcaron el inicio de la era del automóvil.
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="images/auto1.jpg" alt="Primeros automóviles">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 2: Producción en masa -->
+  <section id="seccion2">
+    <div class="contenido">
+      <div class="imagen">
+        <img src="images/auto2.jpg" alt="Producción en masa - Ford Model T">
+      </div>
+      <div class="texto">
+        <h2>2. Producción en Masa</h2>
+        <p>
+          El verdadero cambio llegó cuando el automóvil dejó de ser un lujo 
+          y se convirtió en un producto accesible para las masas.
+        </p>
+        <ul>
+          <li><strong>1908:</strong> Henry Ford lanza el Model T.</li>
+          <li><strong>1913:</strong> Se implementa la línea de montaje móvil.</li>
+          <li><strong>1920s:</strong> El auto se populariza en Estados Unidos y Europa.</li>
+          <li><strong>Resultado:</strong> Precios más bajos y producción a gran escala.</li>
+        </ul>
+        <p>
+          La industria automotriz se convierte en uno de los motores de la economía mundial.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Edad de oro -->
+  <section id="seccion3">
+    <div class="contenido">
+      <div class="texto">
+        <h2>3. La Edad de Oro</h2>
+        <p>
+          Entre las décadas de 1950 y 1970 el automóvil vivió su época más icónica 
+          en diseño, potencia y estilo.
+        </p>
+        <ul>
+          <li><strong>1950-1960:</strong> Diseño extravagante, aletas y cromados (EE.UU.).</li>
+          <li><strong>Muscle cars:</strong> Potencia y rendimiento se convierten en protagonistas.</li>
+          <li><strong>Europa:</strong> Aparecen clásicos como el Volkswagen Beetle, Mini y Porsche 911.</li>
+          <li><strong>1970s:</strong> La crisis del petróleo cambia el rumbo hacia la eficiencia.</li>
+        </ul>
+        <p>
+          Esta época dejó algunos de los modelos más recordados de la historia.
+        </p>
+      </div>
+      <div class="imagen">
+        <img src="images/auto3.jpg" alt="Autos clásicos de la edad de oro">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Era moderna -->
+  <section id="seccion4">
+    <div class="contenido">
+      <div class="imagen">
+        <img src="images/auto4.jpg" alt="Autos modernos y eléctricos">
+      </div>
+      <div class="texto">
+        <h2>4. Era Moderna y el Futuro</h2>
+        <p>
+          En las últimas décadas la tecnología ha redefinido por completo 
+          el concepto de automóvil.
+        </p>
+        <ul>
+          <li><strong>Seguridad:</strong> Airbags, ABS, controles electrónicos y asistencia a la conducción.</li>
+          <li><strong>Electrificación:</strong> Auge de los autos eléctricos e híbridos.</li>
+          <li><strong>Conectividad:</strong> Sistemas inteligentes y vehículos autónomos.</li>
+          <li><strong>Sostenibilidad:</strong> Búsqueda de cero emisiones y nuevas formas de movilidad.</li>
+        </ul>
+        <p>
+          El futuro apunta a vehículos más seguros, limpios, conectados y cada vez más autónomos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Presentación sobre Historia de los Autos · Material educativo
+  </footer>
+
+</body>
+</html>
